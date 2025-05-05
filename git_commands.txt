@@ -88,3 +88,23 @@ Visual Workflow
 ├─ git add .  
 ├─ git commit  
 └─ git push → [GitHub Repository]
+
+
+*********************************************************************************************************************************************************
+To delete the accidently entered file follow the following steps
+1)git rm --cached roundrobin1.cpp  # Keeps local copy
+2)git commit -m "Removed roundrobin1.cpp as it's no longer needed"
+3)git push origin main
+
+
+*************************************************************************************************************************************************************
+
+
+Undoing a Mistaken Deletion
+If you deleted the wrong file:
+
+bash
+# Recover from local Git history
+1)git checkout HEAD^ -- roundrobin1.cpp  # Gets file from last commit
+2)git commit -m "Add roundrobin scheduling implementation"
+3)git push
