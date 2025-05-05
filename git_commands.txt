@@ -1,0 +1,90 @@
+Complete Git/GitHub Workflow Cheat Sheet
+
+
+1. Initialize a Local Git Repository
+# Navigate to your project folder
+cd /path/to/your/project
+
+# Initialize Git
+git init
+2. Create/Copy Your Files
+bash
+# Create a new file (e.g., C++ file)
+touch roundrobin1.cpp
+
+# Or copy existing files into this folder
+cp /path/to/your/files/* .
+3. Stage and Commit Files
+bash
+# Check status (see untracked files)
+git status
+
+# Stage all files
+git add .
+
+# Or stage specific files
+git add roundrobin1.cpp
+
+# Commit with a message
+git commit -m "Initial commit with roundrobin algorithm"
+4. Connect to GitHub
+bash
+# Create a NEW repository at github.com/new (don't initialize with README)
+
+# Link local repo to GitHub (replace with your details)
+git remote add origin git@github.com:CGMAPS1/New_project.git
+5. Push to GitHub
+bash
+# First push (sets upstream branch)
+git push -u origin main
+
+# Subsequent pushes
+git push
+6. Verify on GitHub
+Visit your repo:
+https://github.com/CGMAPS1/New_project
+
+You should see all committed files.
+
+7. Making Future Updates
+bash
+# After modifying files:
+git add .
+git commit -m "Improved roundrobin implementation"
+git push
+8. Essential Maintenance Commands
+bash
+# Check remote URL
+git remote -v
+
+# View commit history
+git log
+
+# Discard local changes
+git checkout -- .
+
+# Pull latest changes
+git pull
+Troubleshooting Quick Fixes
+"Repository not found":
+
+bash
+git remote set-url origin git@github.com:CGMAPS1/New_project.git
+"Permission denied":
+Verify SSH:
+
+bash
+ssh -T git@github.com
+"No such file":
+Double-check paths with:
+
+bash
+ls
+pwd
+Visual Workflow
+[Your Computer]  
+│  
+├─ git init  
+├─ git add .  
+├─ git commit  
+└─ git push → [GitHub Repository]
